@@ -26,9 +26,9 @@ $(function () {
 	//Sticky header function for nav
 	function stickyHeader() {
 		if ($(this).scrollTop() > 100) {
-			$('header').addClass('fixed').fadeIn();
+			$('header').addClass('fixed').fadeIn(2000);
 		} else {
-			$('header').removeClass('fixed').fadeIn();
+			$('header').removeClass('fixed').fadeIn(2000);
 		}
   	}
 

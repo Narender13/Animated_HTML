@@ -9,6 +9,8 @@
     <!-- Global CSS -->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,100,200' rel='stylesheet' type='text/css'>
     <!-- Font Awesome CDN -->
@@ -74,7 +76,61 @@
                         <li class=""><a data-toggle="pill" href="#menu2">Hosting & Support</a></li>
                     </ul>
                 </nav>
-                <div class="tab-content">
+                <div class="tab-content post">
+                    <div id="register-sold" class="tab-pane fade in active">
+                        <div class="two-coloumn">
+                            <div class="two-col-content">
+                                <div class="col-xs-12 col-sm-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="device_name">Device ID</label>
+                                            <select id="device_Id" name="device_name" class="form-control">
+                                                <option value="0">-- Select Device ID -- </option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Customer Info</label>
+                                            <input type="text" placeholder="Invoice Date" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Full Name" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Street Address" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Zip Code" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Contact Number" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xs-12 text-right">
+                                    <button class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	 <section class="tabMenu">
+        <div class="container-fluid">
+            <div class="row">
+                <nav>
+                    <ul class="nav nav-pills">
+                        <li class="active"><a data-toggle="pill" href="#register-sold">Register Sold Device</a></li>
+                        <li><a data-toggle="pill" href="#sold_device">Sold Device List</a></li>
+                        <li class=""><a data-toggle="pill" href="#menu2">Hosting & Support</a></li>
+                    </ul>
+                </nav>
+                <div class="tab-content post">
                     <div id="register-sold" class="tab-pane fade in active">
                         <div class="two-coloumn">
                             <div class="two-col-content">
@@ -179,10 +235,21 @@
     </footer>
     <!-- End Footer -->
     <!-- jQuery -->
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> 
+  <script src="js/main.js"></script>
+<script src="js/viewportchecker.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.post').addClass("hiddenmain").viewportChecker({
+	    classToAdd: 'visible animated flipInY', // Class to add to the elements when they are visible
+	    offset: 100    
+	   });   
+});            
+</script>
     <!-- Bootstrap JavaScript -->
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+   
+   
 </body>
 
 </html>

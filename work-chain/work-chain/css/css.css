@@ -35,13 +35,13 @@ header.fixed .navbar-default .utility-nav {
 }
 
 header.fixed .nav.navbar-nav.navbar-right.main-nav {
-    transition: margin 0.3s ease;
+    transition: margin 1s ease;
     margin-top: 20px;
 }
 
 header.fixed .navbar {
     min-height: 30px;
-    transition: height 0.3s ease;
+    transition: height 1s ease;
 }
 
 @media all and (min-width: 768px) {
